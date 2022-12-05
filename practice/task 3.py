@@ -15,3 +15,12 @@ parameters = [{"method": "GET"}, {"method": "POST"}, {"method": "PUT"}, {"method
 for obj in parameters:
     response = requests.get("https://playground.learnqa.ru/ajax/api/compare_query_type", params=obj)
     print(f"""Trying GET request with "{obj}": {response.text}""")
+for obj in parameters:
+    response = requests.post("https://playground.learnqa.ru/ajax/api/compare_query_type", params=obj)
+    print(f"""Trying POST request with "{obj}": {response.text}""")
+for obj in parameters:
+    response = requests.put("https://playground.learnqa.ru/ajax/api/compare_query_type", params=obj)
+    print(f"""Trying PUT request with "{obj}": {response.text}""")
+for obj in parameters:
+    response = requests.delete("https://playground.learnqa.ru/ajax/api/compare_query_type", params=obj)
+    print(f"""Trying DELETE request with "{obj}": {response.text}""")
